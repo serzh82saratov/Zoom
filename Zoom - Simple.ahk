@@ -147,7 +147,7 @@ SetSize() {
 
 	SetWindowPos(oZoom.hDevCon, conX, conY, conW, conH)
 	SetWindowPos(oZoom.hDev, Left, Top, Width, Height)
-	Redraw() 
+	Redraw()
 	SetTimer, Magnify, -10
 }
 
@@ -163,7 +163,7 @@ SetWindowPos(hWnd, x, y, w, h) {
 		, "Int", w
 		, "Int", h
 		, "UInt", uFlags)
-} 
+}
 
 ZoomOnSize() {
 	If A_EventInfo != 1
@@ -213,7 +213,8 @@ GetClientPos(hwnd, ByRef W, ByRef H)  {
 }
 
 WM_Paint() {
-	SetTimer, Redraw, -10
+	If A_GuiControl =
+		SetTimer, Redraw, -30
 }
 
 WM_SIZING() {
