@@ -44,7 +44,7 @@ DllCall("Gdi32.Dll\SetStretchBltMode", "Ptr", oZoom.hdcDest, "Int", 4)
 oZoom.hGui := hGui
 oZoom.hDev := hDev
 oZoom.hDevCon := hDevCon
-Magnify()
+SetSize(), Magnify() 
 Return
 
 #If !oZoom.Minimize
